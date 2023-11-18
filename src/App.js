@@ -7,6 +7,7 @@ function App() {
   const [age, setAge] = useState(0);
   const [height, setHeight] = useState(0);
   const [superPower, setSuperPower] = useState("");
+  const [displayCharacter, setDisplayCharacter] = useState(false);
 
   return (
     <div className="App">
@@ -46,9 +47,16 @@ function App() {
       />
 
 </div>
-<button onClick={}>Display Character</button>
+<button onClick={() => {setDisplayCharacter(true)}}>Display Character</button>
 <div>
   <h1>Hero Info</h1>
+  {displayCharacter && 
+  <ul>
+    <li>Name: {name}</li>
+    <li>Age: {age}</li>
+    <li>Height: {height}</li>
+    <li>Super Power: {superPower}</li>
+  </ul> }
 </div>
     </div>
   );
